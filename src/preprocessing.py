@@ -39,7 +39,8 @@ def parse_data(dfall):
     for sid in sids:
         df_parallel = pd.merge(df_parallel, add_symbol(sid), how='left',
                                on=['tdate'])
-    return df_parallel
+    df_parallel.to_csv('../cache/parallel.csv')
+    return sids, df_parallel
 
 
 if __name__ == '__main__':
