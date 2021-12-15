@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 from preprocessing import read_data, parse_data
-from Apriori import intra_stock, inter_stock
+from mining import intra_stock, inter_stock
 
 
 def get_intra_info():
@@ -36,7 +36,7 @@ def get_inter_info():
         dfall = read_data()
         sids, dfall = parse_data(dfall)
         dfall = dfall[['symbol_%d' % sid for sid in sids]]
-        inter_stock(dfall)
+        inter_stock(dfall, sids)
 if __name__ == '__main__':
     df_intra = get_inter_info()
 
