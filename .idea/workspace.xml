@@ -2,14 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a081f76-4b02-4553-96a6-17ab532fcc18" name="Changes" comment=" inter stock prediction confidence matrix generation">
-      <change afterPath="$PROJECT_DIR$/cache/confidence.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cache/temp.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cache/test2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cache/test3.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cache/test4.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cache/test5.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cache/test6.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/Report.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/report/Report.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/report/Report.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Tesla-Stock-DataMining.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Tesla-Stock-DataMining.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/confidence.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cache/confidence.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/temp.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/test2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cache/itemset2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/test3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cache/itemset3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/test4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cache/itemset4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/test5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cache/itemset5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache/test6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cache/itemset6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/Report.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mining.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/mining.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/preprocessing.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +65,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\barry\AppData\Local\Programs\Python\Python37\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\BarryDoooIT\AppData\Local\Programs\Python\Python38\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -137,15 +146,39 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="preprocessing" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Tesla-Stock-DataMining" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/preprocessing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Unnamed" />
       <item itemvalue="Python.Main" />
       <item itemvalue="Python.Utils" />
       <item itemvalue="Python.mining" />
+      <item itemvalue="Python.preprocessing" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Main" />
+        <item itemvalue="Python.preprocessing" />
         <item itemvalue="Python.Utils" />
         <item itemvalue="Python.mining" />
       </list>
@@ -160,6 +193,7 @@
       <option name="presentableId" value="Default" />
       <updated>1639530918841</updated>
       <workItem from="1639575758197" duration="9778000" />
+      <workItem from="1639658258612" duration="18214000" />
     </task>
     <task id="LOCAL-00001" summary=" inter stock prediction confidence matrix generation">
       <created>1639654169038</created>
@@ -201,5 +235,9 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Tesla_Stock_DataMining$preprocessing.coverage" NAME="preprocessing Coverage Results" MODIFIED="1639675640796" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/Tesla_Stock_DataMining$Main.coverage" NAME="Main Coverage Results" MODIFIED="1639685246517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>

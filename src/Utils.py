@@ -18,7 +18,3 @@ def is_subsequence(caller, callee):
 
 def count_occurrence(text, item):
     return len(re.findall(item, text, overlapped=True))
-if __name__ == '__main__':
-    arr = np.array([2,2,2,2,2,2])
-    print(is_subsequence( [2,2],arr,))
-    print(map(int, str(12345).zfill(7)))

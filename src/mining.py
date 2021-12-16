@@ -131,7 +131,7 @@ def inter_stock(traces_all, sids, min_support_ratio=0.03):
             if sup >= min_sup:
                 df.loc[row_idx, col_idx] = sup
     df = df.fillna(0)
-    df.to_csv('../cache/test2.csv')
+    df.to_csv('../cache/itemset2.csv')
     df_list.append(df)
     for n in range(3, traces_all.shape[1]+1):
         val_permutations = list(product(unique_vals, repeat=n))
@@ -145,14 +145,6 @@ def inter_stock(traces_all, sids, min_support_ratio=0.03):
                 df2.loc[sum(pow_10[i] * x for i, x in enumerate(p)),
                    sum(pow_10[i] * x for i, x in enumerate(c))] = 0 if sup < min_sup else sup
         df2.fillna(0, inplace=True)
-        df2.to_csv('../cache/test%d.csv' % n)
+        df2.to_csv('../cache/itemset%d.csv' % n)
         df_list.append(df2)
     return df_list
-# 最后组成的样本可使样本之间的相关系数降至最低。
-# 这样保证在一定的风险下使收益更高。
-if __name__ == '__main__':
-    np.set_printoptions(formatter={'float_kind': "{:.3f}".format})
-    dfall = read_data()
-    sids, dfall = parse_data(dfall)
-    rule_set = intra_stock(dfall['symbol_857'].dropna().to_numpy(), 857)
-    print(rule_set)
