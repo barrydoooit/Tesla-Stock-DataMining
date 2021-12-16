@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3a081f76-4b02-4553-96a6-17ab532fcc18" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Tesla-Stock-DataMining.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Tesla-Stock-DataMining.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/parallel.csv" beforeDir="false" afterPath="$PROJECT_DIR$/cache/parallel.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/test.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache/test1.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mining.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/mining.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/preprocessing.py" afterDir="false" />
+    <list default="true" id="3a081f76-4b02-4553-96a6-17ab532fcc18" name="Changes" comment=" inter stock prediction confidence matrix generation">
+      <change afterPath="$PROJECT_DIR$/cache/confidence.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/temp.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/test2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/test3.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/test4.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/test5.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cache/test6.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/Report.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +161,14 @@
       <updated>1639530918841</updated>
       <workItem from="1639575758197" duration="9778000" />
     </task>
+    <task id="LOCAL-00001" summary=" inter stock prediction confidence matrix generation">
+      <created>1639654169038</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1639654169038</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,6 +188,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value=" inter stock prediction confidence matrix generation" />
+    <option name="LAST_COMMIT_MESSAGE" value=" inter stock prediction confidence matrix generation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
