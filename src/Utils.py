@@ -1,6 +1,6 @@
 from itertools import combinations
 import numpy as np
-
+import regex as re
 from src.preprocessing import Symbol
 
 
@@ -21,3 +21,4 @@ def count_occurrence(text, item):
 if __name__ == '__main__':
     arr = np.array([2,2,2,2,2,2])
     print(is_subsequence( [2,2],arr,))
+    print(map(int, str(12345).zfill(7)))

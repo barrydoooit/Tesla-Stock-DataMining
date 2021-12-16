@@ -91,9 +91,6 @@ def intra_stock(traces, sid, win_size=5, min_support_ratio=0.03):
 def inter_stock(traces_all, sids, min_support_ratio=0.03):
     traces_all = traces_all.dropna().astype(int)
     unique_vals = np.unique(traces_all.to_numpy())
-    itemset_1 = np.asarray(np.unique(traces_all.to_numpy(), return_counts=True)).T
-    itemset_all = []
-    # 2nd phase
 
     def calc_sup(vals, stks):
         sup_cnt = 0
@@ -112,13 +109,16 @@ def inter_stock(traces_all, sids, min_support_ratio=0.03):
         for cb in cbs:
             cbarr = np.asarray(cb)
             try:
-                if last_sup_df.at['-'.join(str(round(x)) for x in cbarr[:,0]),'-'.join(str(round(x)) for x in cbarr[:,1])] == 0:
+                if last_sup_df.at[sum(pow_10[i]* x for i, x in enumerate(cbarr[:,0])),
+                   sum(pow_10[i] * x for i, x in enumerate(cbarr[:,1]))] == 0:
                     return True
             except KeyError:
                 return True
         return False
-    n=2
-    min_sup = 30
+
+    pow_10 = [1, 10, 100, 1000, 10000, 100000]
+    n = 2
+    min_sup = 20
     df_list = []
     val_permutations = list(product(unique_vals, repeat=n))
     stock_combinations = list(combinations(sids, r=n))
@@ -126,8 +126,12 @@ def inter_stock(traces_all, sids, min_support_ratio=0.03):
     for p in val_permutations:
         for c in stock_combinations:
             sup = calc_sup(p, c)
-            df.loc['-'.join(str(round(x)) for x in p), '-'.join(str(round(x)) for x in c)] = 0 if sup < min_sup else sup
-    df.to_csv('../cache/test1.csv')
+            row_idx = sum(pow_10[i] * x for i, x in enumerate(p))
+            col_idx = sum(pow_10[i] * x for i, x in enumerate(c))
+            if sup >= min_sup:
+                df.loc[row_idx, col_idx] = sup
+    df = df.fillna(0)
+    df.to_csv('../cache/test2.csv')
     df_list.append(df)
     for n in range(3, traces_all.shape[1]+1):
         val_permutations = list(product(unique_vals, repeat=n))
@@ -138,10 +142,12 @@ def inter_stock(traces_all, sids, min_support_ratio=0.03):
                 if can_ignore(p, c, df_list[-1]):
                     continue
                 sup = calc_sup(p, c)
-                df2.loc['-'.join(str(round(x)) for x in p), '-'.join(str(round(x)) for x in c)] = 0 if sup < min_sup else sup
-        df2.fillna(0)
-        df2.to_csv('../cache/test.csv')
+                df2.loc[sum(pow_10[i] * x for i, x in enumerate(p)),
+                   sum(pow_10[i] * x for i, x in enumerate(c))] = 0 if sup < min_sup else sup
+        df2.fillna(0, inplace=True)
+        df2.to_csv('../cache/test%d.csv' % n)
         df_list.append(df2)
+    return df_list
 # 最后组成的样本可使样本之间的相关系数降至最低。
 # 这样保证在一定的风险下使收益更高。
 if __name__ == '__main__':
